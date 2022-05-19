@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def read_words_file(file_name):
     with open(file_name, 'r') as f:
         lines = f.readlines()
@@ -51,13 +48,13 @@ if __name__ == '__main__':
         letters_chance = initiate_dic()
         calculate_answers()
 
-
-
         # for i in letters_chance.keys():
         #     print(i + ': ', end='')
         #     print(letters_chance[i])
 
+        print(f'\nattempt {attempts + 1}: ', end='')
         guess = str(input()).lower()
+        print('obtained result: ', end='')
         feedback = str(input())
 
         if feedback != '22222':
